@@ -1,0 +1,18 @@
+{
+  "name": "materia-seed",
+  "private": true,
+  "version": "0.0.0",
+  "description": "A starter project for AngularJS and Material Design",
+  "repository": "https://github.com/nachoargentina/material-seed",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^0.6.1",
+    "shelljs": "^0.2.6"
+  },
+  "scripts": {
+
+    "prestart": "npm install",
+    "start": "http-server -a localhost -p 8000 -c-1",
+    "update-index-async": "node -e \"require('shelljs/global'); sed('-i', /\\/\\/@@NG_LOADER_START@@[\\s\\S]*\\/\\/@@NG_LOADER_END@@/, '//@@NG_LOADER_START@@\\n' + sed(/sourceMappingURL=angular-loader.min.js.map/,'sourceMappingURL=bower_components/angular-loader/angular-loader.min.js.map','app/bower_components/angular-loader/angular-loader.min.js') + '\\n//@@NG_LOADER_END@@', 'app/index-async.html');\""
+  }
+}
