@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en" ng-app="materialApp">
+<head>
+    <meta charset="utf-8">
+    <title>Client Details</title>
+    <link rel="stylesheet" href="lib/angular-material/angular-material.min.css">
+    <link rel="stylesheet" href="css/global.css">
+</head>
+<body>
+
+<div ng-controller="ClientDetailsCtrl" layout="column" layout-fill class="form-content">
+    <div flex layout="column" style="z-index:1">
+        <section class="md-whiteframe-z1">
+            <md-content>
+                <form style="padding: 20px;">
+                    <fieldset>
+                        <legend>Personal Data</legend>
+                        <div layout="row" class="row">
+                            <md-text-float label="CUIL" ng-model="client.cuil" disabled> </md-text-float>
+                            <md-text-float label="First Name" ng-model="client.firstName" disabled> </md-text-float>
+                            <md-text-float label="Last Name" ng-model="client.lastName" class="long"> </md-text-float>
+                        </div>
+                    </fieldset>
+
+
+                </form>
+            </md-content>
+        </section>
+    </div>
+
+</div>
+
+
+
+
+<!-- Angular Material Dependencies -->
+<script src="lib/angular/angular.min.js"></script>
+<script src="lib/angular-animate/angular-animate.min.js"></script>
+<script src="lib/hammerjs/hammer.min.js"></script>
+<script src="lib/angular-aria/angular-aria.min.js"></script>
+
+<!-- Angular Material Javascript -->
+<script src="lib/angular-material/angular-material.js"></script>
+
+<!-- Angular Material Javascript -->
+<script src="js/app.js"></script>
+<script src="js/controllers/ClientDetailsCtrl.js"></script>
+</body>
+</html>
